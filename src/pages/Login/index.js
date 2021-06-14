@@ -1,5 +1,5 @@
 import React from 'react'
-import {Text,TouchableOpacity,ImageBackground} from 'react-native';
+import {ImageBackground} from 'react-native';
 import styled from 'styled-components';
 import LinerGradient from 'react-native-linear-gradient';
 
@@ -26,13 +26,13 @@ color:#FFF;
 `;
 
 
-const Login = ({navigation}) => {
+const Login = ({}) => {
     return(
         <InSafeAreaView>
             <ImageBackground style={{width: '100%',height: '100%'}} source={require('../../assets/imgs/backLogin.jpg')}>
                 <LinerGradient colors={['rgba(0,0,0,1)','rgba(0,0,0,0)']} style={{position: 'absolute', top:0,height:400,width:'100%' }}/>
                 <InAreaView onPress={()=>{
-                    navigation.navigate('Main')}}>
+                    navigation.navigate('Teste')}}>
                         
                     <Logo resizeMode="contain" source={require('../../assets/imgs/logoLogin2.png')} />
                     <Messenger> Touch the screen to continue </Messenger>

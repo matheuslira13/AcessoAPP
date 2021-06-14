@@ -11,8 +11,8 @@ const Character = ({route}) => {
 
     return (
         <Wallpaper  source={require('../../assets/imgs/backCharacter.jpg')}>
-            <ContainerCharacter>
-                <ImageProfile source={{uri:`${character.thumbnail.path}.${character.thumbnail.extension}`}} />
+            <ContainerCharacter >
+                <ImageProfile key={character.id} source={{uri:`${character.thumbnail.path}.${character.thumbnail.extension}`}} />
                 <Square>
                     <ScrollView>
                     <Name>{character.name}</Name>
@@ -21,7 +21,7 @@ const Character = ({route}) => {
                         {character.description || 'Without description'}
                     </Description>
                     <Description>
-                        <Text style={{fontWeight:'bold'}}>Appears in: </Text>
+                        <Text style={{fontWeight:'bold'}}>Appears in stories: </Text>
                        {character.stories.items.length || 'Without params'}
                     </Description>
                     </ScrollView>

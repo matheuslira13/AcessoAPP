@@ -1,5 +1,4 @@
 import React from 'react';
-import {Text} from 'react-native';
 
 import Login from './src/pages/Login';
 import Main from './src/pages/Main';
